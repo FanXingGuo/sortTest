@@ -255,8 +255,8 @@ func BucketSort(arr []float64, bktNum int) {
 	output := make([]float64, length)
 	buckets := make([]int, bucket_nums)
 	buckets2 := make([]int, bucket_nums)
-	_, min := MaxAndMin(arr)
-	d := 1.0/float64(bktNum)
+	max, min := MaxAndMin(arr)
+	d := (max-min)/float64(bktNum)
 
 	for i := 0; i < length; i++ {
 		index :=int( (arr[i] - min) / d)

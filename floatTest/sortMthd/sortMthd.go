@@ -155,7 +155,7 @@ func SingleSort(arr []float64,method string){
 func IsSorted(arr []float64) int {
 	for i := 1; i < len(arr); i++ {
 		if arr[i] < arr[i-1] {
-			//fmt.Println("无序索引","：",i-1,i,".数值：",arr[i-1],arr[i],"")
+			fmt.Println("无序索引","：",i-1,i,".数值：",arr[i-1],arr[i],"")
 			fmt.Println("Order Check:Array Disordered")
 			return 0
 		}
@@ -168,7 +168,7 @@ func IsSorted(arr []float64) int {
 func Si_eMo(arr []float64)int {
 	count := 0
 	for i := 0; i < len(arr); i++ {
-		d:= int(arr[i]*1000)
+		d:= int(arr[i]*100000000)
 		if d%2 == 0 {
 			count +=d
 		} else {
